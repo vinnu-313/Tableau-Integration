@@ -7,14 +7,18 @@ and open the template in the editor.
 <html ng-app="tabApp">
     <head>
         <script src="lib/xdomain.js" slave="http://uiatab.glassbeam.com:8000/v_82001410151955/desktop/proxy.html"></script>
-        <title>Tableau Integration</title>
+        <title>New User</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body ng-controller="TableauController">
-        <h1 ng-bind="appName"></h1>
-        <div id="placeHolder"></div>
-        <script src="lib/xml2json.min.js"></script>
+    <body ng-controller="NewUserController">
+        <div>New user for tableau</div>
+        <form>
+            <label>User Name : </label>
+            <input type="text" ng-model="username"/>
+            <input type="button" value="Load Tableau" ng-click="loadPage()"/>
+        </form>
+         <script src="lib/xml2json.min.js"></script>
         <script src="lib/angular.min.js"></script>
         <script src="lib/angular-xml.min.js"></script>
         <script src="js/app.js"></script>
